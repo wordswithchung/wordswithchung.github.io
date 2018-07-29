@@ -1,0 +1,19 @@
+html,
+body {
+  background-image: url("background_geometry2.png");
+}
+
+#chung-name {
+  font-family: 'Quando', serif;
+  color: #5c5c5c;
+}
+
+#list-of-things,
+.text-on-main-page {
+  font-family: 'Open Sans', sans-serif;
+  color: #5c5c5c;
+}
+
+.icon-images {
+  height: 25px;
+}
