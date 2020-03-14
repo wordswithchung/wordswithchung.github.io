@@ -1,17 +1,239 @@
 html,
 body {
-  background-image: url("background_geometry2.png");
+  background-image: url("triangle-mosaic.png");
 }
 
-#chung-name {
+header > img {
+  width: 100vw;
+  max-height: 500px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+header > .header-text {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  display: flex;
+}
+
+.header-text > .text {
+  padding: 1rem;
+}
+
+header > .profile-picture {
+  /* position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%); */
+}
+
+.flip-box {
+  /* position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%); */
+
+  background-color: transparent;
+  width: 250px;
+  perspective: 1000px;
+}
+
+.flip-box-front > img,
+.flip-box-back > img {
+  width: 250px;
+  border-radius: 3rem;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  /* text-align: center; */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
+}
+
+.header-text {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%);
   font-family: 'Quando', serif;
-  color: #5c5c5c;
 }
 
-#list-of-things,
-.text-on-main-page {
+.header-name {
+  color: white;
+}
+
+.header-title {
+  color: white;
+}
+
+.body-text {
   font-family: 'Open Sans', sans-serif;
   color: #5c5c5c;
+}
+
+.card-img-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img-overlay > .text {
+  padding-right: 1rem;
+}
+
+#skills-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.section-header {
+  font-family: 'Pacifico', sans-serif;
+  color: #5c5c5c;
+  font-size: 5rem;
+  padding: 2rem;
+  text-shadow: 0.15rem 0.25rem #c6bcdd;
+}
+
+ul.list-of-skills > li {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+
+ul.list-of-skills {
+  width: 100%;
+}
+
+.skill-container {
+  min-width: 80%;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.progress {
+  height: 28px;
+}
+
+.progress-10 {
+  width: 10%;
+  animation: animation10 2s;
+}
+
+@keyframes animation10 {
+  from { width: 0 }
+  to   { width: 10% }
+}
+
+.progress-25 {
+  width: 25%;
+  animation: animation25 3s;
+}
+
+@keyframes animation25 {
+  from { width: 0 }
+  to   { width: 25% }
+}
+
+.progress-50 {
+  width: 50%;
+  animation: animation5 6s;
+}
+
+@keyframes animation5 {
+  from { width: 0 }
+  to   { width: 50% }
+}
+
+.progress-75 {
+  width: 75%;
+  animation: animation75 9s;
+}
+
+@keyframes animation75 {
+  from { width: 0 }
+  to { width: 75% }
+}
+
+.progress-90 {
+  width: 90%;
+  animation: animation90 10s;
+}
+
+@keyframes animation90 {
+  from { width: 0 }
+  to { width: 90% }
+}
+
+.progress-100 {
+  width: 100%;
+  animation: animation100 12s;
+}
+
+@keyframes animation100 {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.progress-color-red {
+  background-color: #ea989d;
+}
+
+.progress-color-blue {
+  background-color: #b9d7f7;
+}
+
+.progress-color-green {
+  background-color: #bee8bb;
+}
+
+.progress-color-yellow {
+  background-color: #f9f2c0;
+}
+
+.progress-color-lavender {
+  background-color: #c6bcdd;
+}
+
+footer > img {
+  /* width: 100vw; */
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel-item-header {
+  font-family: 'Pacifico';
+  font-size: 4rem;
 }
 
 .icon-images {
